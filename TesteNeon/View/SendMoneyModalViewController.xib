@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendMoneyModalViewController" customModule="TesteNeon" customModuleProvider="target">
+            <connections>
+                <outlet property="centerYConstraint" destination="CHm-TN-bV2" id="3AA-OO-wKr"/>
+                <outlet property="emailLabel" destination="eJ1-eO-Mce" id="J7B-PO-HAh"/>
+                <outlet property="friendPhoto" destination="ib3-Zi-who" id="Qle-66-DxV"/>
+                <outlet property="friendShortName" destination="EMF-Du-1ac" id="SBX-g9-6gA"/>
+                <outlet property="imageContainer" destination="Qw1-C3-jet" id="NvM-Mg-ZpK"/>
+                <outlet property="modalContainer" destination="rKs-c8-XLO" id="9to-0w-j6k"/>
+                <outlet property="nameLabel" destination="UjW-Si-Yma" id="PSy-vN-WBo"/>
+                <outlet property="sendButton" destination="ddt-HF-SmX" id="Aoi-Qb-cBb"/>
+                <outlet property="valueTextfield" destination="Gsn-NI-Atn" id="DB3-Mz-Epi"/>
+                <outlet property="view" destination="iN0-l3-epB" id="9Os-nW-o7o"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKs-c8-XLO">
+                    <rect key="frame" x="32" y="269.5" width="350" height="357"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofs-7E-Mql">
+                            <rect key="frame" x="16" y="16" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="2Xe-08-72f"/>
+                                <constraint firstAttribute="width" constant="32" id="hRc-2c-p6m"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            <state key="normal" title="x">
+                                <color key="titleColor" name="DisableGray"/>
+                            </state>
+                            <connections>
+                                <action selector="dismissAction:" destination="-1" eventType="touchUpInside" id="thH-fb-RFz"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qw1-C3-jet">
+                            <rect key="frame" x="145" y="16" width="60" height="60"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMF-Du-1ac">
+                                    <rect key="frame" x="9" y="20" width="42" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" name="PrimaryColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ib3-Zi-who">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="KiI-SD-nY0"/>
+                                        <constraint firstAttribute="height" constant="60" id="iE1-7T-zLI"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="ib3-Zi-who" firstAttribute="leading" secondItem="Qw1-C3-jet" secondAttribute="leading" id="8GV-YB-gWV"/>
+                                <constraint firstAttribute="height" constant="60" id="Dp1-1X-eaQ"/>
+                                <constraint firstItem="EMF-Du-1ac" firstAttribute="centerX" secondItem="Qw1-C3-jet" secondAttribute="centerX" id="Qnr-wA-NOq"/>
+                                <constraint firstItem="EMF-Du-1ac" firstAttribute="centerY" secondItem="Qw1-C3-jet" secondAttribute="centerY" id="VbV-n6-rdX"/>
+                                <constraint firstItem="ib3-Zi-who" firstAttribute="top" secondItem="Qw1-C3-jet" secondAttribute="top" id="ZFP-LE-hv0"/>
+                                <constraint firstAttribute="width" constant="60" id="s7L-xh-3EA"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjW-Si-Yma">
+                            <rect key="frame" x="16" y="84" width="318" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJ1-eO-Mce">
+                            <rect key="frame" x="16" y="116" width="318" height="22"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor a enviar:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ni0-Gc-AWf">
+                            <rect key="frame" x="16" y="170" width="318" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="R$0,00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsn-NI-Atn">
+                            <rect key="frame" x="16" y="203.5" width="318" height="71.5"/>
+                            <color key="backgroundColor" name="DisableGray"/>
+                            <color key="textColor" name="PrimaryColor"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="46"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddt-HF-SmX" customClass="CornerButton" customModule="TesteNeon" customModuleProvider="target">
+                            <rect key="frame" x="16" y="287" width="318" height="54"/>
+                            <color key="backgroundColor" name="PrimaryColor"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                            <state key="normal" title="ENVIAR">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="sendMoneyAction:" destination="-1" eventType="touchUpInside" id="IgL-aw-dfS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="ModalColor"/>
+                    <constraints>
+                        <constraint firstItem="eJ1-eO-Mce" firstAttribute="leading" secondItem="rKs-c8-XLO" secondAttribute="leading" constant="16" id="0QH-BY-Ogp"/>
+                        <constraint firstItem="ni0-Gc-AWf" firstAttribute="top" secondItem="eJ1-eO-Mce" secondAttribute="bottom" constant="32" id="2Yj-Ly-JPF"/>
+                        <constraint firstAttribute="trailing" secondItem="UjW-Si-Yma" secondAttribute="trailing" constant="16" id="7aN-pl-hRe"/>
+                        <constraint firstAttribute="bottom" secondItem="ddt-HF-SmX" secondAttribute="bottom" constant="16" id="Abt-Fn-WyD"/>
+                        <constraint firstItem="Gsn-NI-Atn" firstAttribute="leading" secondItem="rKs-c8-XLO" secondAttribute="leading" constant="16" id="Ff3-DT-2xb"/>
+                        <constraint firstItem="Qw1-C3-jet" firstAttribute="centerX" secondItem="rKs-c8-XLO" secondAttribute="centerX" id="Ilm-Se-ar3"/>
+                        <constraint firstItem="ddt-HF-SmX" firstAttribute="leading" secondItem="rKs-c8-XLO" secondAttribute="leading" constant="16" id="MhB-Wl-Hdp"/>
+                        <constraint firstItem="ofs-7E-Mql" firstAttribute="leading" secondItem="rKs-c8-XLO" secondAttribute="leading" constant="16" id="Rhv-gA-bE7"/>
+                        <constraint firstAttribute="trailing" secondItem="eJ1-eO-Mce" secondAttribute="trailing" constant="16" id="UY7-dh-PQ7"/>
+                        <constraint firstItem="ofs-7E-Mql" firstAttribute="top" secondItem="rKs-c8-XLO" secondAttribute="top" constant="16" id="VZF-HU-5GR"/>
+                        <constraint firstItem="ddt-HF-SmX" firstAttribute="top" secondItem="Gsn-NI-Atn" secondAttribute="bottom" constant="12" id="ZJU-88-pS2"/>
+                        <constraint firstAttribute="trailing" secondItem="Gsn-NI-Atn" secondAttribute="trailing" constant="16" id="ZZK-Cs-CMf"/>
+                        <constraint firstItem="UjW-Si-Yma" firstAttribute="top" secondItem="Qw1-C3-jet" secondAttribute="bottom" constant="8" id="Zl6-Al-CDs"/>
+                        <constraint firstItem="UjW-Si-Yma" firstAttribute="leading" secondItem="rKs-c8-XLO" secondAttribute="leading" constant="16" id="daR-rA-AbB"/>
+                        <constraint firstAttribute="trailing" secondItem="ddt-HF-SmX" secondAttribute="trailing" constant="16" id="jHp-Ny-24s"/>
+                        <constraint firstAttribute="trailing" secondItem="ni0-Gc-AWf" secondAttribute="trailing" constant="16" id="k7X-az-D4n"/>
+                        <constraint firstItem="Qw1-C3-jet" firstAttribute="top" secondItem="rKs-c8-XLO" secondAttribute="top" constant="16" id="mcE-iy-ob0"/>
+                        <constraint firstItem="eJ1-eO-Mce" firstAttribute="top" secondItem="UjW-Si-Yma" secondAttribute="bottom" constant="8" id="umz-Kl-JC4"/>
+                        <constraint firstItem="ni0-Gc-AWf" firstAttribute="leading" secondItem="rKs-c8-XLO" secondAttribute="leading" constant="16" id="zju-kw-HKE"/>
+                        <constraint firstItem="Gsn-NI-Atn" firstAttribute="top" secondItem="ni0-Gc-AWf" secondAttribute="bottom" constant="12" id="zmO-Jh-XjN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ddt-HF-SmX" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.06" id="0kX-Uk-N5E"/>
+                <constraint firstItem="rKs-c8-XLO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CHm-TN-bV2"/>
+                <constraint firstItem="rKs-c8-XLO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Sb2-D2-Jhp"/>
+                <constraint firstItem="Gsn-NI-Atn" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.08" id="She-Kq-hg0"/>
+                <constraint firstItem="rKs-c8-XLO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="c2T-bH-J8o"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rKs-c8-XLO" secondAttribute="trailing" constant="32" id="dNc-gU-ZXq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="DisableGray">
+            <color red="0.88999998569488525" green="0.88999998569488525" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ModalColor">
+            <color red="0.19215686274509805" green="0.33725490196078434" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.0" green="0.64313725490196083" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
